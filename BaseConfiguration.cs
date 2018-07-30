@@ -1,7 +1,4 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
-
-namespace ZCorp.ConfigurationUtilities
+﻿namespace ZCorp.ConfigurationUtilities
 {
     public class BaseConfiguration
     {
