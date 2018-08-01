@@ -1,4 +1,6 @@
-﻿namespace ZCorp.ConfigurationUtilities
+﻿using Nett;
+
+namespace ZCorp.ConfigurationUtilities
 {
     public class BaseConfiguration
     {
@@ -6,6 +8,13 @@
         {
             Graphics = new Graphics();
             Audio = new Audio();
+        }
+
+
+        public BaseConfiguration(TomlTable tomlTable)
+        {
+            Graphics = tomlTable.TryGetValue("Graphics").Get<Graphics>();
+            Audio = tomlTable.TryGetValue("Graphics").Get<Audio>();
         }
 
         public Graphics Graphics { set; get; }
